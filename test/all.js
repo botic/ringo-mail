@@ -1,4 +1,4 @@
-var mail = require('ringo-mail');
+var mail = require('../lib/main');
 
 const ADDRESS_1 = 'John Doe <jdoe@example.com>',
     ADDRESS_2 = 'RingoJS <ringojs@mailinator.com>',
