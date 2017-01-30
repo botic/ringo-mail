@@ -16,19 +16,19 @@ exports.testSendingMailWithVariousInputOptions = function () {
     mail.send({from: ADDRESS_1, to: ADDRESS_2, subject: SUBJECT, text: TEXT});
     mail.send({from: ADDRESS_1, to: ADDRESS_2, subject: SUBJECT, html: HTML});
     mail.send({to: ADDRESS_2, text: TEXT});
-    mail.send({to: ADDRESS_2, subject: SUBJECT});
-    mail.send({from: ADDRESS_1, to: [ADDRESS_2, ADDRESS_3]});
-    mail.send({to: ADDRESS_2, cc: ADDRESS_3});
-    mail.send({to: ADDRESS_2, cc: [ADDRESS_3, ADDRESS_1]});
-    mail.send({to: ADDRESS_2, bcc: ADDRESS_3});
-    mail.send({to: ADDRESS_2, bcc: [ADDRESS_3, ADDRESS_1]});
-    mail.send({to: ADDRESS_2, replyTo: ADDRESS_1});
-    mail.send({to: ADDRESS_2, replyTo: [ADDRESS_1, ADDRESS_3]});
+    mail.send({to: ADDRESS_2, subject: SUBJECT,text: TEXT});
+    mail.send({from: ADDRESS_1, to: [ADDRESS_2, ADDRESS_3],text: TEXT});
+    mail.send({to: ADDRESS_2, cc: ADDRESS_3,text: TEXT});
+    mail.send({to: ADDRESS_2, cc: [ADDRESS_3, ADDRESS_1],text: TEXT});
+    mail.send({to: ADDRESS_2, bcc: ADDRESS_3,text: TEXT});
+    mail.send({to: ADDRESS_2, bcc: [ADDRESS_3, ADDRESS_1],text: TEXT});
+    mail.send({to: ADDRESS_2, replyTo: ADDRESS_1,text: TEXT});
+    mail.send({to: ADDRESS_2, replyTo: [ADDRESS_1, ADDRESS_3],text: TEXT});
     mail.send({from: ADDRESS_1, to: ADDRESS_2, headers:
-            {'Content-Language': 'en', Keywords: 'ringojs, javax.mail'}});
-    mail.send({from: ADDRESS_1, to: ADDRESS_2, attachments: ATTACHMENT});
-    mail.send({to: ADDRESS_2, attachments: [ATTACHMENT, ATTACHMENT]});
-    mail.send({from: ADDRESS_1, to: ADDRESS_2});
+            {'Content-Language': 'en', Keywords: 'ringojs, javax.mail'},text: TEXT});
+    mail.send({from: ADDRESS_1, to: ADDRESS_2, attachments: ATTACHMENT,text: TEXT});
+    mail.send({to: ADDRESS_2, attachments: [ATTACHMENT, ATTACHMENT],text: TEXT});
+    mail.send({from: ADDRESS_1, to: ADDRESS_2,text: TEXT});
 };
 
 // Provide valid Gmail account info above and remove "_" in test name to run.
