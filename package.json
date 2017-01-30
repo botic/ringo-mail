@@ -9,5 +9,13 @@
         "Emilis Dambauskas (http://emilis.info/)",
         "Philipp Naderer-Puiu (https://github.com/botic)"
     ],
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/botic/ringo-mail/raw/master/LICENSE"
+    }],
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/botic/ringo-mail.git"
+    }],
     "main": "lib/main.js"
 }
